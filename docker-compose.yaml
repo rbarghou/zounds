@@ -1,0 +1,16 @@
+version: '2.3'
+
+services:
+    jupyter:
+        build: .
+        expose:
+            - "8888"
+            - "8080"
+        ports:
+            - "8888:8888"
+            - "8080:8080"
+        runtime: "nvidia"
+        volumes:
+            - "./notebooks:/notebooks"
+            - "./zounds:/notebooks/zounds"
+        entrypoint: ["jupyter", "notebook", "--allow-root"]

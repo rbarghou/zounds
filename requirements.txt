@@ -1,0 +1,9 @@
+numpy
+scipy
+sklearn
+tensorflow-gpu
+feedparser
+pandas
+librosa
+keras
+tqdm
